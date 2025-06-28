@@ -1,0 +1,320 @@
+/* Responsive Design */
+
+/* Tablettes (768px et moins) */
+@media screen and (max-width: 768px) {
+    /* Navigation */
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: var(--transition-normal);
+        box-shadow: 0 10px 20px var(--shadow);
+        padding: var(--spacing-lg) 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: var(--spacing-sm) 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Hero Section */
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 100px var(--spacing-sm) var(--spacing-xl);
+        gap: var(--spacing-xl);
+    }
+
+    .hero-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-base);
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+
+    /* Features */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .feature-card {
+        padding: var(--spacing-lg);
+    }
+
+    /* Products */
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-md);
+    }
+
+    /* About Preview */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Mobiles (480px et moins) */
+@media screen and (max-width: 480px) {
+    /* Typography */
+    .hero-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+
+    .about-text h2 {
+        font-size: var(--font-size-2xl);
+    }
+
+    /* Spacing */
+    .container {
+        padding: 0 var(--spacing-xs);
+    }
+
+    .hero {
+        padding: 80px var(--spacing-xs) var(--spacing-lg);
+    }
+
+    .features {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .popular-products {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .about-preview {
+        padding: var(--spacing-xl) 0;
+    }
+
+    .footer {
+        padding: var(--spacing-xl) 0 var(--spacing-md);
+    }
+
+    /* Buttons */
+    .hero-buttons {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: var(--font-size-small);
+    }
+
+    /* Products */
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .product-card {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    /* Hero Image */
+    .hero-image {
+        height: 250px;
+    }
+
+    .slider-dots {
+        bottom: var(--spacing-sm);
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    /* Feature Cards */
+    .feature-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .feature-icon i {
+        font-size: var(--font-size-2xl);
+    }
+
+    /* About Image */
+    .about-image img {
+        height: 250px;
+    }
+}
+
+/* Grands écrans (1200px et plus) */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .hero-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    .hero-subtitle {
+        font-size: var(--font-size-xl);
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-2xl);
+    }
+}
+
+/* Très grands écrans (1600px et plus) */
+@media screen and (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+    }
+
+    .hero {
+        min-height: 90vh;
+    }
+
+    .hero-content {
+        max-width: 600px;
+    }
+
+    .hero-image {
+        height: 600px;
+    }
+}
+
+/* Orientation paysage sur mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: 80px var(--spacing-sm) var(--spacing-lg);
+    }
+
+    .hero-image {
+        height: 200px;
+    }
+}
+
+/* Préférences de réduction de mouvement */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .loading-spinner {
+        animation: none;
+    }
+}
+
+/* Mode sombre (optionnel) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --white: #1a1a1a;
+        --soft-white: #2a2a2a;
+        --dark-gray: #e0e0e0;
+        --gray: #b0b0b0;
+    }
+
+    body {
+        background-color: var(--soft-white);
+        color: var(--dark-gray);
+    }
+
+    .header {
+        background-color: var(--white);
+    }
+
+    .feature-card,
+    .product-card,
+    .value-card {
+        background-color: var(--white);
+    }
+}
+
+/* Impression */
+@media print {
+    .header,
+    .footer,
+    .nav-cart,
+    .hero-buttons,
+    .add-to-cart {
+        display: none !important;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .container {
+        max-width: none;
+        padding: 0;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+
+    .product-card {
+        break-inside: avoid;
+        margin-bottom: 20pt;
+    }
+} 

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue - Pépinière Verte</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-seedling"></i>
+                    <span>Pépinière Verte</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="catalogue.html" class="nav-link active">Catalogue</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-cart">
+                    <a href="panier.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="catalogue-header">
+        <div class="container">
+            <h1>Notre Catalogue de Plantes</h1>
+            <p>Découvrez notre sélection de plantes d'intérieur, d'extérieur et médicinales</p>
+        </div>
+    </section>
+
+    <section class="filters-section">
+        <div class="container">
+            <div class="filters-container">
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="search-input" placeholder="Rechercher une plante...">
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <div class="filter-group">
+                        <label for="category-filter">Catégorie</label>
+                        <select id="category-filter">
+                            <option value="">Toutes les catégories</option>
+                            <option value="interior">Plantes d'intérieur</option>
+                            <option value="exterior">Plantes d'extérieur</option>
+                            <option value="medicinal">Plantes médicinales</option>
+                            <option value="succulents">Succulentes</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="price-filter">Prix</label>
+                        <select id="price-filter">
+                            <option value="">Tous les prix</option>
+                            <option value="0-15">Moins de 15€</option>
+                            <option value="15-30">15€ - 30€</option>
+                            <option value="30-50">30€ - 50€</option>
+                            <option value="50+">Plus de 50€</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sort-filter">Trier par</label>
+                        <select id="sort-filter">
+                            <option value="name">Nom A-Z</option>
+                            <option value="name-desc">Nom Z-A</option>
+                            <option value="price">Prix croissant</option>
+                            <option value="price-desc">Prix décroissant</option>
+                            <option value="popular">Popularité</option>
+                        </select>
+                    </div>
+
+                    <button class="btn btn-outline" id="clear-filters">
+                        <i class="fas fa-times"></i> Effacer les filtres
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalogue-results">
+        <div class="container">
+            <div class="results-header">
+                <div class="results-count">
+                    <span id="results-count">0</span> plante(s) trouvée(s)
+                </div>
+                <div class="view-options">
+                    <button class="view-btn active" data-view="grid">
+                        <i class="fas fa-th"></i>
+                    </button>
+                    <button class="view-btn" data-view="list">
+                        <i class="fas fa-list"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="products-grid" id="catalogue-products">
+            </div>
+
+            <div class="no-results" id="no-results" style="display: none;">
+                <i class="fas fa-search"></i>
+                <h3>Aucun résultat trouvé</h3>
+                <p>Essayez de modifier vos critères de recherche ou vos filtres.</p>
+                <button class="btn btn-primary" onclick="clearAllFilters()">Effacer tous les filtres</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pépinière Verte</h3>
+                    <p>Votre spécialiste des plantes d'intérieur et d'extérieur depuis 2003.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="catalogue.html">Catalogue</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Catégories</h4>
+                    <ul>
+                        <li><a href="catalogue.html?category=interior">Plantes d'intérieur</a></li>
+                        <li><a href="catalogue.html?category=exterior">Plantes d'extérieur</a></li>
+                        <li><a href="catalogue.html?category=medicinal">Plantes médicinales</a></li>
+                        <li><a href="catalogue.html?category=succulents">Succulentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Rue des Fleurs, 75001 Paris</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-envelope"></i> contact@pepiniere-verte.fr</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pépinière Verte. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/catalogue.js"></script>
+</body>
+</html> 

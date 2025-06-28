@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pépinière Verte - Plantes d'intérieur et d'extérieur</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-seedling"></i>
+                    <span>Pépinière Verte</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="catalogue.html" class="nav-link">Catalogue</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-cart">
+                    <a href="panier.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Découvrez la Beauté Naturelle</h1>
+            <p class="hero-subtitle">Des plantes d'exception pour embellir votre intérieur et extérieur</p>
+            <div class="hero-buttons">
+                <a href="catalogue.html" class="btn btn-primary">Voir le catalogue</a>
+                <a href="about.html" class="btn btn-secondary">En savoir plus</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="hero-slider">
+                <div class="slide active">
+                    <img src="images/Affiche_1.png" alt="Affiche promotionnelle 1">
+                </div>
+                <div class="slide">
+                    <img src="images/Affiche_2.png" alt="Affiche promotionnelle 2">
+                </div>
+                <div class="slide">
+                    <img src="images/background.png" alt="Arrière-plan pépinière">
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Plantes d'Intérieur</h3>
+                    <p>Purifiez votre air et embellissez votre espace avec nos plantes d'intérieur sélectionnées.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Plantes d'Extérieur</h3>
+                    <p>Créez un jardin magnifique avec nos plantes d'extérieur adaptées à tous les climats.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Plantes Médicinales</h3>
+                    <p>Découvrez les bienfaits naturels de nos plantes médicinales et aromatiques.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Products -->
+    <section class="popular-products">
+        <div class="container">
+            <h2 class="section-title">Nos Plantes Populaires</h2>
+            <div class="products-grid" id="popular-products">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+            <div class="text-center">
+                <a href="catalogue.html" class="btn btn-outline">Voir tout le catalogue</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Notre Passion pour les Plantes</h2>
+                    <p>Depuis plus de 20 ans, nous cultivons avec amour une large variété de plantes pour embellir vos espaces de vie. Notre expertise vous garantit des plantes saines et durables.</p>
+                    <a href="about.html" class="btn btn-primary">Découvrir notre histoire</a>
+                </div>
+                <div class="about-image">
+                    <img src="images/background.png" alt="Notre pépinière">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pépinière Verte</h3>
+                    <p>Votre spécialiste des plantes d'intérieur et d'extérieur depuis 2003.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="catalogue.html">Catalogue</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Catégories</h4>
+                    <ul>
+                        <li><a href="catalogue.html?category=interior">Plantes d'intérieur</a></li>
+                        <li><a href="catalogue.html?category=exterior">Plantes d'extérieur</a></li>
+                        <li><a href="catalogue.html?category=medicinal">Plantes médicinales</a></li>
+                        <li><a href="catalogue.html?category=succulents">Succulentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Rue des Fleurs, 75001 Paris</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-envelope"></i> contact@pepiniere-verte.fr</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pépinière Verte. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Animation -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner">
+            <i class="fas fa-seedling"></i>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html> 

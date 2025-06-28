@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Panier - Pépinière Verte</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-seedling"></i>
+                    <span>Pépinière Verte</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="catalogue.html" class="nav-link">Catalogue</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-cart">
+                    <a href="panier.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="cart-header">
+        <div class="container">
+            <h1>Mon Panier</h1>
+            <p>Vérifiez vos articles avant de finaliser votre commande</p>
+        </div>
+    </section>
+
+    <section class="cart-content">
+        <div class="container">
+            <div class="cart-layout">
+                <div class="cart-items-section">
+                    <div class="cart-items-header">
+                        <h2>Articles dans votre panier</h2>
+                        <button class="btn btn-outline" onclick="cart.clearCart()">
+                            <i class="fas fa-trash"></i> Vider le panier
+                        </button>
+                    </div>
+                    
+                    <div id="cart-items">
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-card">
+                        <h3>Résumé de la commande</h3>
+                        
+                        <div class="summary-item">
+                            <span>Sous-total</span>
+                            <span id="cart-subtotal">0.00 €</span>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <span>Livraison</span>
+                            <span id="shipping-cost">5.00 €</span>
+                        </div>
+                        
+                        <div class="summary-item total">
+                            <span>Total</span>
+                            <span id="cart-total">0.00 €</span>
+                        </div>
+
+                        <div class="promo-code">
+                            <input type="text" id="promo-input" placeholder="Code promo (optionnel)">
+                            <button class="btn btn-outline" onclick="applyPromoCode()">
+                                Appliquer
+                            </button>
+                        </div>
+
+                        <button class="btn btn-primary checkout-btn" onclick="checkout()">
+                            <i class="fas fa-credit-card"></i> Finaliser la commande
+                        </button>
+
+                        <div class="cart-actions">
+                            <a href="catalogue.html" class="btn btn-outline">
+                                <i class="fas fa-arrow-left"></i> Continuer les achats
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="delivery-info">
+                        <h4><i class="fas fa-truck"></i> Livraison</h4>
+                        <p>Livraison gratuite à partir de 50€ d'achat</p>
+                        <p>Délai de livraison : 3-5 jours ouvrés</p>
+                    </div>
+
+                    <div class="security-info">
+                        <h4><i class="fas fa-shield-alt"></i> Paiement sécurisé</h4>
+                        <p>Vos données sont protégées par un cryptage SSL</p>
+                        <div class="payment-methods">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Pépinière Verte</h3>
+                    <p>Votre spécialiste des plantes d'intérieur et d'extérieur depuis 2003.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="catalogue.html">Catalogue</a></li>
+                        <li><a href="about.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Catégories</h4>
+                    <ul>
+                        <li><a href="catalogue.html?category=interior">Plantes d'intérieur</a></li>
+                        <li><a href="catalogue.html?category=exterior">Plantes d'extérieur</a></li>
+                        <li><a href="catalogue.html?category=medicinal">Plantes médicinales</a></li>
+                        <li><a href="catalogue.html?category=succulents">Succulentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Rue des Fleurs, 75001 Paris</p>
+                        <p><i class="fas fa-phone"></i> +33 1 23 45 67 89</p>
+                        <p><i class="fas fa-envelope"></i> contact@pepiniere-verte.fr</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Pépinière Verte. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        function applyPromoCode() {
+            const promoInput = document.getElementById('promo-input');
+            const code = promoInput.value.trim().toUpperCase();
+            
+            if (code === 'VERTE10') {
+                alert('Code promo appliqué ! 10% de réduction sur votre commande.');
+            } else if (code === 'LIVRAISON') {
+                alert('Code promo appliqué ! Livraison gratuite.');
+            } else if (code) {
+                alert('Code promo invalide.');
+            } else {
+                alert('Veuillez entrer un code promo.');
+            }
+        }
+    </script>
+</body>
+</html> 
